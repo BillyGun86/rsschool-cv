@@ -55,3 +55,6 @@ Self-study in frontend development.
 English level: A2.
 
 I study English to read technical documentation and improve my professional communication skills.
+## Projects
+
+- [CV project](https://github.com/BillyGun86/rsschool-cv) - a personal CV created with Markdown, HTML and CSS.
