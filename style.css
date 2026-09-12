@@ -1,0 +1,268 @@
+﻿:root {
+  --background-color: #eef2f7;
+  --surface-color: #ffffff;
+  --primary-color: #17324d;
+  --secondary-color: #3d6b8f;
+  --accent-color: #d47b3f;
+  --text-color: #263746;
+  --muted-color: #647789;
+  --border-color: #d9e1e8;
+  --shadow: 0 12px 30px rgba(23, 50, 77, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background-color);
+  color: var(--text-color);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--secondary-color);
+  transition: color 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--accent-color);
+}
+
+.page-wrapper {
+  width: min(100% - 32px, 1000px);
+  margin: 32px auto;
+  overflow: hidden;
+  background: var(--surface-color);
+  box-shadow: var(--shadow);
+}
+
+.site-header {
+  padding: 24px 48px 48px;
+  background: var(--primary-color);
+  color: #ffffff;
+}
+
+.navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 24px;
+  margin: 0 0 48px;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation-list a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.navigation-list a:hover,
+.navigation-list a:focus {
+  color: #ffd3a8;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.avatar {
+  width: 180px;
+  height: 180px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border: 6px solid #ffffff;
+  border-radius: 50%;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #ffd3a8;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+  line-height: 1.2;
+}
+
+h1 {
+  margin-bottom: 8px;
+  color: #ffffff;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+h2 {
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--accent-color);
+  font-size: 1.6rem;
+}
+
+h3 {
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+.profession {
+  margin: 0;
+  color: #dce8f1;
+  font-size: 1.15rem;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  padding: 48px;
+}
+
+.cv-section {
+  min-width: 0;
+}
+
+.cv-section p {
+  margin-top: 0;
+}
+
+.contact-section,
+#about,
+#experience,
+#projects {
+  grid-column: span 2;
+}
+
+.contact-list,
+.skills-list,
+.cv-section ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.contact-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 32px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.contact-list span {
+  font-weight: 700;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.skills-list li {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #e7eff5;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+pre {
+  max-width: 100%;
+  margin: 0;
+  overflow-x: auto;
+  padding: 20px;
+  border-radius: 8px;
+  background: #17212b;
+  color: #e6edf3;
+}
+
+.project-card {
+  padding: 20px;
+  border-left: 4px solid var(--accent-color);
+  background: #f5f8fa;
+}
+
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 24px 48px;
+  background: #dfe8ef;
+  color: var(--primary-color);
+}
+
+.github-link {
+  font-weight: 700;
+}
+
+.rsschool-link img {
+  display: block;
+  width: 100px;
+  height: 37px;
+  object-fit: contain;
+}
+
+@media (max-width: 700px) {
+  .page-wrapper {
+    width: min(100% - 20px, 1000px);
+    margin: 10px auto;
+  }
+
+  .site-header,
+  .main-content {
+    padding: 28px 22px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .main-content {
+    display: block;
+  }
+
+  .cv-section {
+    margin-bottom: 32px;
+  }
+
+  .contact-section,
+  #about,
+  #experience,
+  #projects {
+    grid-column: auto;
+  }
+
+  .contact-list {
+    display: block;
+  }
+
+  .contact-list li {
+    margin-bottom: 10px;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    padding: 24px 22px;
+    text-align: center;
+  }
+}
